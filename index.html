@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraíso dos Focinhos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-controls">
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon" id="theme-icon"></i>
+                <span data-pt="Escuro" data-en="Dark">Escuro</span>
+            </button>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+                <i class="fas fa-globe"></i>
+                <span id="current-lang">EN</span>
+            </button>
+        </div>
+        
+        <div class="logo">
+            <span>PF</span>
+        </div>
+        <h1 data-pt="Paraíso dos Focinhos" data-en="Snouts Paradise">Paraíso dos Focinhos</h1>
+        <p data-pt="Ajudando animais a encontrar um novo lar" data-en="Helping animals find a new home">Ajudando animais a encontrar um novo lar</p>
+        
+        <nav class="menu">
+            <a href="#sobre" data-pt="Sobre Nós" data-en="About Us">Sobre Nós</a>
+            <a href="#stats" data-pt="Estatísticas" data-en="Statistics">Estatísticas</a>
+            <a href="#adotar" data-pt="Adoção" data-en="Adoption">Adoção</a>
+            <a href="#galeria" data-pt="Galeria" data-en="Gallery">Galeria</a>
+            <a href="#ajudar" data-pt="Como Ajudar" data-en="How to Help">Como Ajudar</a>
+            <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <div class="banner-text">
+            <h2 data-pt="Ajude a transformar vidas" data-en="Help transform lives">Ajude a transformar vidas</h2>
+            <p data-pt="Conheça nosso trabalho de resgate e adoção de animais abandonados" data-en="Learn about our work rescuing and adopting abandoned animals">Conheça nosso trabalho de resgate e adoção de animais abandonados</p>
+            <a href="#ajudar" class="btn" data-pt="Quero Ajudar" data-en="I Want to Help">Quero Ajudar</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title fade-in" data-pt="Sobre Nós" data-en="About Us">Sobre Nós</h2>
+            <div class="sobre-content fade-in">
+                <div class="sobre-text">
+                    <p data-pt="O Paraíso dos Focinhos é uma organização sem fins lucrativos dedicada ao resgate, reabilitação e adoção de animais abandonados." data-en="Snouts Paradise is a non-profit organization dedicated to rescuing, rehabilitating and adopting abandoned animals.">O Paraíso dos Focinhos é uma organização sem fins lucrativos dedicada ao resgate, reabilitação e adoção de animais abandonados.</p>
+                    <p data-pt="Nosso trabalho é possível graças ao apoio de voluntários e doações da comunidade." data-en="Our work is made possible thanks to the support of volunteers and community donations.">Nosso trabalho é possível graças ao apoio de voluntários e doações da comunidade.</p>
+                    <p data-pt="Desde nossa fundação, já resgatamos centenas de animais e encontramos lares amorosos para eles." data-en="Since our founding, we have rescued hundreds of animals and found loving homes for them.">Desde nossa fundação, já resgatamos centenas de animais e encontramos lares amorosos para eles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2 class="section-title" data-pt="Nossos Números" data-en="Our Numbers">Nossos Números</h2>
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <span class="stat-number counter" data-target="347">0</span>
+                    <span class="stat-label" data-pt="Animais Resgatados" data-en="Animals Rescued">Animais Resgatados</span>
+                </div>
+                <div class="stat-item fade-in">
+                    <span class="stat-number counter" data-target="289">0</span>
+                    <span class="stat-label" data-pt="Adoções Realizadas" data-en="Successful Adoptions">Adoções Realizadas</span>
+                </div>
+                <div class="stat-item fade-in">
+                    <span class="stat-number counter" data-target="156">0</span>
+                    <span class="stat-label" data-pt="Voluntários Ativos" data-en="Active Volunteers">Voluntários Ativos</span>
+                </div>
+                <div class="stat-item fade-in">
+                    <span class="stat-number counter" data-target="58">0</span>
+                    <span class="stat-label" data-pt="Animais Disponíveis" data-en="Animals Available">Animais Disponíveis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="adotar" class="adotar">
+        <div class="container">
+            <h2 class="section-title fade-in" data-pt="Adote um Amigo" data-en="Adopt a Friend">Adote um Amigo</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: var(--text-light);" data-pt="Conheça alguns dos nossos animais disponíveis para adoção" data-en="Meet some of our animals available for adoption">Conheça alguns dos nossos animais disponíveis para adoção</p>
+            
+            <div class="animais-grid">
+                <div class="animal-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=300&h=250&fit=crop" alt="Cachorro para adoção">
+                    <div class="animal-info">
+                        <h3>Thor</h3>
+                        <p data-pt="Macho, 2 anos - Carinhoso e brincalhão" data-en="Male, 2 years old - Affectionate and playful">Macho, 2 anos - Carinhoso e brincalhão</p>
+                        <button class="btn" onclick="openAdoptionModal('Thor')" data-pt="Quero Adotar" data-en="I Want to Adopt">Quero Adotar</button>
+                    </div>
+                </div>
+                
+                <div class="animal-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=250&fit=crop" alt="Gato para adoção">
+                    <div class="animal-info">
+                        <h3>Luna</h3>
+                        <p data-pt="Fêmea, 1 ano - Calma e afetuosa" data-en="Female, 1 year old - Calm and affectionate">Fêmea, 1 ano - Calma e afetuosa</p>
+                        <button class="btn" onclick="openAdoptionModal('Luna')" data-pt="Quero Adotar" data-en="I Want to Adopt">Quero Adotar</button>
+                    </div>
+                </div>
+                
+                <div class="animal-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=250&fit=crop" alt="Cachorro para adoção">
+                    <div class="animal-info">
+                        <h3>Max</h3>
+                        <p data-pt="Macho, 3 anos - Protetor e leal" data-en="Male, 3 years old - Protective and loyal">Macho, 3 anos - Protetor e leal</p>
+                        <button class="btn" onclick="openAdoptionModal('Max')" data-pt="Quero Adotar" data-en="I Want to Adopt">Quero Adotar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria" style="background-color: var(--card-bg); padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title fade-in" data-pt="Galeria de Momentos" data-en="Moments Gallery">Galeria de Momentos</h2>
+            <div class="gallery">
+                <div class="gallery-item fade-in" onclick="openImageModal('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" alt="Momento feliz">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" onclick="openImageModal('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop" alt="Resgate">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" onclick="openImageModal('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop" alt="Adoção">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" onclick="openImageModal('https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&h=300&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&h=300&fit=crop" alt="Voluntários">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus" style="color: white; font-size: 2rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ajudar" class="ajudar">
+        <div class="container">
+            <h2 class="section-title fade-in" data-pt="Como Ajudar" data-en="How to Help">Como Ajudar</h2>
+            <div class="ajudar-options">
+                <div class="ajudar-option fade-in">
+                    <div class="ajudar-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 data-pt="Doação" data-en="Donation">Doação</h3>
+                    <p data-pt="Contribua financeiramente para nosso trabalho" data-en="Contribute financially to our work">Contribua financeiramente para nosso trabalho</p>
+                    <p class="highlight" style="font-weight: bold; color: var(--primary-color); font-size: 1.1rem;">PIX: 21 976090612</p>
+                </div>
+                <div class="ajudar-option fade-in">
+                    <div class="ajudar-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 data-pt="Voluntariado" data-en="Volunteering">Voluntariado</h3>
+                    <p data-pt="Doe seu tempo para cuidar dos animais" data-en="Donate your time to care for animals">Doe seu tempo para cuidar dos animais</p>
+                    <button class="btn" onclick="openVolunteerModal()" data-pt="Quero ser Voluntário" data-en="I Want to Volunteer">Quero ser Voluntário</button>
+                </div>
+                <div class="ajudar-option fade-in">
+                    <div class="ajudar-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 data-pt="Adoção" data-en="Adoption">Adoção</h3>
+                    <p data-pt="Dê um novo lar para um animal resgatado" data-en="Give a new home to a rescued animal">Dê um novo lar para um animal resgatado</p>
+                    <a href="#adotar" class="btn" data-pt="Ver Animais" data-en="See Animals">Ver Animais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato" style="background-color: var(--bg-color); padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title fade-in" data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h2>
+            
+            <div class="contato-info" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 50px; text-align: center;">
+                <div class="contato-item fade-in" style="margin: 15px; min-width: 200px;">
+                    <h3 style="margin-bottom: 10px; color: var(--text-color);">Instagram</h3>
+                    <p><a href="https://www.instagram.com/ongparaisodosfocinhos" target="_blank" style="color: var(--primary-color); text-decoration: none;">@ongparaisodosfocinhos</a></p>
+                </div>
+                <div class="contato-item fade-in" style="margin: 15px; min-width: 200px;">
+                    <h3 style="margin-bottom: 10px; color: var(--text-color);">WhatsApp</h3>
+                    <p><a href="https://wa.me/5521976090612" target="_blank" style="color: var(--primary-color); text-decoration: none;">(21) 97609-0612</a></p>
+                </div>
+                <div class="contato-item fade-in" style="margin: 15px; min-width: 200px;">
+                    <h3 style="margin-bottom: 10px; color: var(--text-color);">PIX</h3>
+                    <p style="color: var(--text-color);">21 976090612</p>
+                </div>
+            </div>
+            
+            <div class="contato-form fade-in">
+                <h3 style="text-align: center; margin-bottom: 30px; color: var(--text-color);" data-pt="Envie uma Mensagem" data-en="Send a Message">Envie uma Mensagem</h3>
+                <form id="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="nome" data-pt="Nome completo" data-en="Full name">Nome completo</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <div class="error-message" data-pt="Por favor, insira seu nome completo" data-en="Please enter your full name">Por favor, insira seu nome completo</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-pt="E-mail" data-en="Email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" data-pt="Por favor, insira um e-mail válido" data-en="Please enter a valid email">Por favor, insira um e-mail válido</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone" data-pt="Telefone" data-en="Phone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone">
+                        <div class="error-message" data-pt="Por favor, insira um telefone válido" data-en="Please enter a valid phone">Por favor, insira um telefone válido</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto" data-pt="Assunto" data-en="Subject">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="" data-pt="Selecione um assunto" data-en="Select a subject">Selecione um assunto</option>
+                            <option value="adocao" data-pt="Interesse em Adoção" data-en="Interest in Adoption">Interesse em Adoção</option>
+                            <option value="voluntario" data-pt="Quero ser Voluntário" data-en="I want to be a Volunteer">Quero ser Voluntário</option>
+                            <option value="doacao" data-pt="Informações sobre Doação" data-en="Donation Information">Informações sobre Doação</option>
+                            <option value="outros" data-pt="Outros" data-en="Others">Outros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem" data-pt="Mensagem" data-en="Message">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        <div class="error-message" data-pt="Por favor, insira sua mensagem" data-en="Please enter your message">Por favor, insira sua mensagem</div>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 20px;">
+                        <span data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</span>
+                        <div class="loading" style="display: none;"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-pt="&copy; 2025 Paraíso dos Focinhos - Todos os direitos reservados" data-en="&copy; 2025 Snouts Paradise - All rights reserved">&copy; 2025 Paraíso dos Focinhos - Todos os direitos reservados</p>
+            <div class="social">
+                <a href="https://www.instagram.com/ongparaisodosfocinhos" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5521976090612" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:contato@paraisodosfocinhos.org" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+  
+    <div id="adoptionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('adoptionModal')">&times;</span>
+            <h3 id="adoptionTitle" data-pt="Interesse em Adoção" data-en="Interest in Adoption">Interesse em Adoção</h3>
+            <p id="adoptionText" data-pt="Que ótimo que você tem interesse em adotar! Entre em contato conosco pelo WhatsApp para iniciar o processo." data-en="Great that you're interested in adopting! Contact us on WhatsApp to start the process.">Que ótimo que você tem interesse em adotar! Entre em contato conosco pelo WhatsApp para iniciar o processo.</p>
+            <a href="https://wa.me/5521976090612" target="_blank" class="btn" style="margin-top: 20px;">
+                <i class="fab fa-whatsapp"></i>
+                <span data-pt="Conversar no WhatsApp" data-en="Chat on WhatsApp">Conversar no WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('volunteerModal')">&times;</span>
+            <h3 data-pt="Seja um Voluntário" data-en="Be a Volunteer">Seja um Voluntário</h3>
+            <p data-pt="Obrigado pelo interesse em ser voluntário! Precisamos de pessoas como você. Entre em contato para saber como ajudar." data-en="Thank you for your interest in volunteering! We need people like you. Get in touch to find out how to help.">Obrigado pelo interesse em ser voluntário! Precisamos de pessoas como você. Entre em contato para saber como ajudar.</p>
+            <div style="margin-top: 20px;">
+                <a href="https://wa.me/5521976090612" target="_blank" class="btn" style="margin-right: 10px;">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="https://www.instagram.com/ongparaisodosfocinhos" target="_blank" class="btn">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content" style="max-width: 80%; padding: 20px;">
+            <span class="close" onclick="closeModal('imageModal')">&times;</span>
+            <img id="modalImage" src="" alt="Imagem ampliada" style="width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+
+   
+    <button class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
